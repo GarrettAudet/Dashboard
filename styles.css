@@ -1,0 +1,46 @@
+:root {
+    font-size: calc(0.75rem + 0.4vw);
+    --primary-color: #525252;
+    --secondary-color: #FAFAFF;
+    --third-color: #E4D9FF;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template: auto 4fr / 1fr 3fr;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.sidebar .top-right-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 3rem;
+}
+
+.sidebar .top-right-logo img {
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    height: auto;
+}
+
+.sidebar .top-right-logo h3 {
+    margin: 0px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.header {
+    background-color: var(--secondary-color);
+}
+
