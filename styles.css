@@ -1,21 +1,26 @@
 :root {
     font-size: calc(0.75rem + 0.4vw);
-    --primary-color: #525252;
+    --primary-color: #000;
     --secondary-color: #FAFAFF;
     --third-color: #E4D9FF;
+    --aside-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.9);
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     margin: 0px;
     display: grid;
-    grid-template: auto 4fr / 1fr 3fr;
+    grid-template: auto 4fr / 1fr 4fr;
 }
 
 .sidebar {
+    grid-row: 1 / -1;
+    position: sticky;
     background-color: var(--primary-color);
     display: grid;
     grid-template-rows: auto auto 1fr;
+    gap: 2.5rem;
     color: var(--secondary-color);
     padding: 1rem;
 }
@@ -40,7 +45,33 @@ body {
     cursor: pointer;
 }
 
+li {
+    list-style-type: none;
+}
+
+div li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+div li img {
+    width: auto;
+    max-height: 2rem;
+    object-fit: contain;
+    height: auto;
+}
+
+.upper-left, .lower-left {
+    display: grid;
+}
+
+.sidebar .lower-left {
+    align-content: start;
+}
+
 .header {
     background-color: var(--secondary-color);
+    grid-area: 1/2 / 2/-1;
 }
 
