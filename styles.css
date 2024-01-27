@@ -4,6 +4,7 @@
     --secondary-color: #FAFAFF;
     --third-color: #5DA9E9;
     --fourth-color: #A31621;
+    --text-tertiary: rgba(128, 128, 128, 0.25); 
     --aside-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.9);
     --fast-transition: 0.3s;
 }
@@ -143,9 +144,9 @@ div li:hover svg path {
 }
 
 .top-right:hover, .top-left:hover {
-    background-color: var(--third-color);
+    background-color: var(--text-tertiary);
 }
 
 .top-left span {
-    color: var(--fourth-color);
+    color: var(--third-color);
 }
