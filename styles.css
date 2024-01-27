@@ -3,6 +3,7 @@
     --primary-color: #000;
     --secondary-color: #FAFAFF;
     --third-color: #5DA9E9;
+    --fourth-color: #A31621;
     --aside-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.9);
     --fast-transition: 0.3s;
 }
@@ -12,7 +13,7 @@ body {
     min-height: 100vh;
     margin: 0px;
     display: grid;
-    grid-template: auto 4fr / 1fr 4fr;
+    grid-template: auto 4fr / .75fr 4fr;
 }
 
 .sidebar {
@@ -104,11 +105,6 @@ svg {
     align-content: start;
 }
 
-.header {
-    background-color: var(--secondary-color);
-    grid-area: 1/2 / 2/-1;
-}
-
 div li:hover p {
     color: var(--third-color);
 }
@@ -119,4 +115,37 @@ div li:hover img {
 
 div li:hover svg path {
     stroke: var(--third-color); /* SVG stroke color for hover */
+}
+
+.header {
+    grid-area: 1/2 / 2/-1;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.top-right, .top-left {
+    padding: 8px; /* Adjust padding as needed */
+    border-radius: 8px; /* This rounds the corners of the border */
+    display: flex; /* This ensures the content inside is centered */
+    justify-content: center; /* This centers the child elements horizontally */
+    align-items: center; /* This centers the child elements vertically */
+    max-width: fit-content; /* This ensures the box fits the content width */
+}
+
+.top-right {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow for depth */
+    border: 1px solid #ccc; /* Adjust color and thickness as needed */
+    background: #ffffff; /* Adjust background color as needed */
+}
+
+.top-right:hover, .top-left:hover {
+    background-color: var(--third-color);
+}
+
+.top-left span {
+    color: var(--fourth-color);
 }
