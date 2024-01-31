@@ -14,7 +14,8 @@ body {
     min-height: 100vh;
     margin: 0px;
     display: grid;
-    grid-template: auto 4fr / .75fr 4fr;
+    /* grid-template: auto 4fr / .75fr 4fr; */
+    grid-template: auto 2fr 2fr / .75fr 4fr;
 }
 
 .sidebar {
@@ -44,7 +45,7 @@ body {
 
 .sidebar .top-right-logo h3 {
     margin: 0px;
-    font-size: 2rem;
+    font-size: 1.75rem;
     cursor: pointer;
 }
 
@@ -149,4 +150,71 @@ div li:hover svg path {
 
 .top-left span {
     color: var(--third-color);
+}
+
+.main-content {
+    grid-row: 1 / -1;
+    position: sticky;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-content: start;
+    gap: 2.5rem;
+    padding: 1rem;
+    /* display: grid;
+    grid-template-rows: auto 1fr 6fr; */
+}
+
+.project-content {
+    overflow-y: auto;
+}
+
+.search-bar {
+    align-self: end;
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar form {
+    display: flex;
+    width: 50%;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px 10px;
+}
+
+.search-bar p {
+    font-size: 0.75rem;
+}
+
+.search-input {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    width: 100%; /* Use available space */
+    height: 40px; /* Match your desired height */
+    font-size: 16px; /* Match your desired font size */
+}
+
+.search-input::placeholder {
+    color: #a0a0a0; /* Placeholder text color */
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.search-input:focus,
+.search-btn:focus {
+    outline: none;
+}
+
+.search-btn:hover svg {
+    fill: var(--third-color); /* Change the color of the SVG icon */
 }
