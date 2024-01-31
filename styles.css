@@ -165,7 +165,62 @@ div li:hover svg path {
 }
 
 .project-content {
-    overflow-y: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template: auto auto auto / 1fr 1fr;
+    gap: 1rem;
+    padding: 0em 1.5em;
+    justify-content: center;
+    overflow: auto;
+}
+
+.project {
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 200px;
+    max-height: 20vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: .9rem;
+    align-items: center;
+    grid-column: span 1;
+    box-shadow: inset 0.5em 0 0 var(--primary-color), 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    border:0.1px solid var(--primary-color);
+    border-radius: 1em;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    transform-origin: center; 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+    z-index: 10; 
+}
+
+.action-block {
+    position: relative
+}
+
+.action-block svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#eyeIcon .iris {
+    fill: none;
+    transition: fill 0.3s ease;
+}
+
+#eyeIcon:hover .iris {
+    fill: var(--third-color);
+}
+
+.title-block, .text-block, .action-block {
+    margin: 15px;
 }
 
 .search-bar {
@@ -217,4 +272,19 @@ div li:hover svg path {
 
 .search-btn:hover svg {
     fill: var(--third-color); /* Change the color of the SVG icon */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .project {
+        font-size: .75rem;
+    }
 }
