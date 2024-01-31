@@ -115,8 +115,12 @@ div li:hover img {
     opacity: 0.6; /* Example hover effect for images */
 }
 
-div li:hover svg path {
+div li:hover svg {
     stroke: var(--third-color); /* SVG stroke color for hover */
+}
+
+.hover-path:hover {
+    fill: var(--third-color);
 }
 
 .header {
